@@ -69,6 +69,7 @@
           <!-- /.card -->
         </div>
       </div>
+
 @stop
 
 @section('css')

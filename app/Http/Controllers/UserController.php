@@ -33,16 +33,12 @@ class UserController extends Controller
             try{
                 $user->email_notifications = $req->notification;
                 $user->save();
-                return redirect('notificacoes')->with('status',"Notificações habilitadas");
+                return redirect('notificacoes')->with('status',"Configurações de notificão alteradas");
             }
             catch(Exception $e){
                 return redirect('notificacoes')->with('failed',"operation failed");
             }
         }
         return redirect('notificaoes')->with('failed',"operation failed");
-        //dd($req->notification);
-        //$user->email_notifications = $req->notification;
-        //User::find($id)->update($user);
-        //return redirect()->route('home');
     }
 }

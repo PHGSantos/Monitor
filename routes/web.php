@@ -35,3 +35,4 @@ Route::get('/edit_site/{id}', [App\Http\Controllers\WebpageController::class, 'e
 Route::get('/delete_site/{id}', [App\Http\Controllers\WebpageController::class, 'deletar'])->name('deletar');
 
 Route::get('/notify_user', [App\Http\Controllers\UserController::class, 'notify_user'])->name('notify_user');
+

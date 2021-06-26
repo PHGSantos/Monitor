@@ -8,7 +8,9 @@ use \App\Models\Webpage;
 use \Illuminate\Http\Response;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rule;
-
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Notification;
+use App\Notifications\MailNotification;
 
 class HomeController extends Controller
 {
@@ -55,6 +57,11 @@ class HomeController extends Controller
             $i=$i + 1;
         }
         //dd($objects);
+        
+        $user=Auth::user();
+        if($user->email_notifications == 1)
+            $user->notify(new MailNotification($objects));
+
         return view('home')->with('objects',$objects);
     }
 
@@ -104,5 +111,6 @@ class HomeController extends Controller
     public function notificar_usuario(){
         return view('notificacoes');
     }
+
 
 }
