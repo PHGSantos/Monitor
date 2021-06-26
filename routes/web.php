@@ -28,7 +28,7 @@ Route::get('/notificacoes', [App\Http\Controllers\HomeController::class, 'notifi
 
 Route::post('/add_site', [App\Http\Controllers\HomeController::class, 'add_site']);
 
-Route::put('/att_site/{id}', [App\Http\Controllers\WebpageController::class, 'atualizar'])->name('atualizar');
+Route::get('/att_site/{id}', [App\Http\Controllers\WebpageController::class, 'atualizar'])->name('atualizar');
 
 Route::get('/edit_site/{id}', [App\Http\Controllers\WebpageController::class, 'editar'])->name('editar');
 
