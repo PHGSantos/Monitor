@@ -46,3 +46,7 @@ Passos para a execução do projeto:
 10.Exemplo de email na plataforma MailTrap:![email](https://user-images.githubusercontent.com/20564308/123499356-87ba0980-d60c-11eb-85d8-7ba4d2abf048.PNG)
 
 11.Para efetuar o logout, clique no seu nome presente no canto superior direito e aperte o botão logout. 
+
+Observação: o status de cada site é monitorado a cada vez que a tela 'home' é aberta. Caso o usuário opte por receber emails de notificação, um email também será enviado a ele neste momento. O requisito de implementar uma automação deste monitoramento juntamente com o sistema de emails, em intervalos periódicos não foi concluído...
+
+
